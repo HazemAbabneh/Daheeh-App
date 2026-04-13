@@ -1,0 +1,60 @@
+name: dahih_app_new
+description: "تطبيق دحيح التوجيهي - Pomodoro وToDo List للطلاب"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  audioplayers: ^6.1.0
+  path_provider: ^2.1.5
+  shared_preferences: ^2.5.3
+  uuid: ^4.5.2
+  google_fonts: ^6.2.1
+  # Phase 1 – Visual Identity
+  dynamic_color: 1.6.0
+  sensors_plus: ^5.0.0
+  # Phase 2 – Focus Engine
+  flutter_local_notifications: ^18.0.1
+  confetti: ^0.7.0
+  flutter_dnd: ^0.1.4+1
+  # Phase 3 & 5 – Curriculum & Gamification
+  image_picker: ^1.2.0
+  google_mlkit_text_recognition: ^0.14.0
+  intl: ^0.19.0
+  screenshot: ^3.0.0
+  share_plus: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.0
+
+# flutter_launcher_icons config
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/sounds/pomodoro_end.wav
+    - assets/sounds/task_added.wav
+    - assets/sounds/task_removed.wav
+    - assets/data/
+
+  shaders:
+    - assets/shaders/aurora.frag
+
+dependency_overrides:
+  material_color_utilities: 0.11.1
